@@ -1,0 +1,97 @@
+.playerarea {
+    border: black 2px solid;
+    height: 25%;
+    width: 100%;
+    background-color: rgb(149, 149, 189);
+}
+
+.chatbox {
+    border: black 2px solid;
+    height: 30vh;
+    width: 100%;
+    background-color: white;
+    
+}
+
+.chat-wrapper{
+    margin-top: 3px;
+    border: black 2px solid;
+    width: 100%;
+    background-color: royalblue;
+}
+
+#chat{
+    min-width: 75%;
+}
+
+#daddyrow{
+    
+
+}
+
+#say{
+    width: 23%;
+    background-color: rgb(24, 196, 61);
+}
+
+.container-fluid{
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    min-height: 100%;
+    
+}
+
+#maincont{
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 2px;
+    min-height: 100%;
+    
+    
+    
+}
+
+#topbuttons {
+display: flex;
+background-color: rosybrown;
+
+
+}
+
+#startdiv{
+    width: 50%;
+}
+
+#resetdiv{
+    width: 50%;
+}
+
+#startbutton{
+    background-color: rgb(24, 196, 61);
+    width: 100%;
+}
+
+#resetform {
+    width: 100%;
+}
+
+#start{
+ width: 100%;
+}
+
+#reset{
+    background-color: red;
+    width: 100%;
+
+}
+
+#auctionarea {
+    margin-top: 3px;
+    border: black 2px solid;
+    height: 17em;
+    width: 100%;
+    background-color: white
+}

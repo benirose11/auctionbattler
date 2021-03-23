@@ -1,0 +1,172 @@
+<% layout('layouts/boilerplate')%>
+
+<div id='maincont' class="container">
+    <div id='daddyrow' class="row">
+      <div class="col-sm">
+
+<%for(let i = 1; i<5; i++) { %> 
+    <div class="playerarea" id=<%=`playerarea${i}`%> >
+    <div class="row">
+
+        <div class="col-3">
+            <h3>Player:</h3>
+        </div>
+
+
+        <div class="col-9">
+            <div class='name-select wrapper' id=<%=`name-field${i}`%>>
+                <form id=<%=`name-select${i}`%>>
+                    <input  type="text" id=<%=`username${i}`%> autocomplete="off" title="username"/>
+                    <button class='nameinputbutton'>Set Username and Take Seat</button>
+                </form>            
+            </div>
+        </div>
+
+        <div class="col-6">
+           Gold Remaining:
+        </div>
+        <div class="col-6" id=<%=`gold-field${i}`%>>                   
+        </div>
+        <div class="col-6">
+            Drafted Warriors:
+        </div>
+        <div class="col-6" id=<%=`warrior-field${i}`%> >                 
+        </div>  
+   
+    </div> 
+    </div>
+
+<% } %> 
+
+
+        
+</div>
+
+
+
+
+      <div class="col-sm" id="centercolumn">
+          <div id="topbuttons">
+          <div id="resetdiv">
+              <form id="resetform" >
+                  <button id='reset'>Reset Players and Seats</button>
+                </form>
+            </div>
+          <div id="startdiv">
+            <form id="start" >
+                <button id='startbutton'>Start Round</button>
+            </form>
+        </div>
+    </div>
+       <div class="chatbox">
+        <ul id='events'></ul>
+        
+       </div>
+       <div class='chat-wrapper'>
+        <form id="chat-form">
+            <input id="chat" autocomplete="off" title="chat"/>
+            <button id='say'>Say</button>
+        </form>
+        </div>
+        
+
+    <div id="auctionarea">
+        <h1>Auction Block</h1>
+        <div class="row gx-1">
+            <div class="col-6">Name:</div>
+            <div class="col-6" id="warriornamefield"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">Damage:</div>
+            <div class="col-6" id="warriordamagefield"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">HP:</div>
+            <div class="col-6" id="warriorhpfield"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">Special Abilities:</div>
+            <div class="col-6" id="warriorabilitiesfield"></div>
+        </div>
+        <div class="row">
+            <div class="col-7"><h2>Current Bid</h2></div>
+            <div class="col-5"><h2 id="bidfield"></h2></div>
+        </div>
+
+        <div class="row">
+            <div class="col-4"><h3>Highest Bidder:</h3></div>
+            <div class="col-4"><h2 id="highestbidderfield"></h2></div>
+            <div class="col-4"><form id="bidbutton"><button>Bid$$$$</button></form></div>
+        </div>
+
+
+
+
+        
+    </div>
+
+
+
+
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+
+
+<div class="col-sm">
+    <%for(let i = 5; i<9; i++) { %> 
+        <div class="playerarea" id=<%=`playerarea${i}`%> >
+            <div class="row">
+        
+                <div class="col-3">
+                    <h3>Player:</h3>
+                </div>
+        
+        
+                <div class="col-9">
+                    <div class='name-select wrapper' id=<%=`name-field${i}`%>>
+                        <form id=<%=`name-select${i}`%>>
+                            <input  type="text" id=<%=`username${i}`%> autocomplete="off" title="username"/>
+                            <button class='nameinputbutton'>Set Username and Take Seat</button>
+                        </form>            
+                    </div>
+                </div>
+        
+                <div class="col-6">
+                   Gold Remaining:
+                </div>
+                <div class="col-6" id=<%=`gold-field${i}`%>>                   
+                </div>
+                <div class="col-6">
+                    Drafted Warriors:
+                </div>
+                <div class="col-6" id=<%=`warrior-field${i}`%> >                 
+                </div>  
+           
+            </div> 
+            </div>
+    
+    <% } %> 
+</div>
+
+
+
+    </div>
+  </div>
+
+
+  <script src="/socket.io/socket.io.js"></script>
+  
